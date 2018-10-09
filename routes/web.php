@@ -36,11 +36,11 @@ Route::get('/', function () {
 	Route::get('pasien/delete/{id}','PasienController@delete');
 
 	Route::get('kamar' ,'KamarController@index');
-	Route::get('kamar/add','Kamarontroller@add');
-	Route::post('kamar/save','Kamarontroller@save');
-	Route::get('kamar/edit/{id}','Kamarontroller@edit');
-	Route::post('kamar/update','Kamarontroller@update');
-	Route::get('kamar/delete/{id}','Kamarontroller@delete');
+	Route::get('kamar/add','KamarController@add');
+	Route::post('kamar/save','KamarController@save');
+	Route::get('kamar/edit/{id}','KamarController@edit');
+	Route::post('kamar/update','KamarController@update');
+	Route::get('kamar/delete/{id}','KamarController@delete');
 
 	Route::get('fasilitas' , 'FasilitasController@index');
 	Route::get('fasilitas/add','FasilitasController@add');
