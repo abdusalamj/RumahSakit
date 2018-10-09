@@ -15,6 +15,13 @@ class CreateObatsTable extends Migration
     {
         Schema::create('obats', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_jenis')->unsigned();
+            $table->foreign('id_jenis')->references('id')->on('jenis_obats')->onDelete('cascade');
+            $table->string('nama');
+            $table->string('kategori');
+            $table->string('harga');
+            $table->string('jumlah');
+            $table->enum('stok', ['box', 'pcs', 'buah', 'sachet', 'strip']);
             $table->timestamps();
         });
     }
