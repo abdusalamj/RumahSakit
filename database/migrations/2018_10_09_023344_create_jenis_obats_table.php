@@ -19,6 +19,14 @@ class CreateJenisObatsTable extends Migration
             $table->string('keterangan');
             $table->timestamps();
         });
+        DB::table('jenis_obats')->insert([
+            'jenis' => "Jenis 1",
+            'keterangan' => "Keterangan 1"
+        ],
+        [
+            'jenis' => "Jenis 2",
+            'keterangan' => "Keterangan 2"
+        ]);
     }
 
     /**
