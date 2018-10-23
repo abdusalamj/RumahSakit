@@ -23,7 +23,7 @@
 								<label>Jenis</label>
 								<select class="form-control" value="{{$obats->JenisObat->jenis}}" name="jenis">
 									@foreach($jenis as $data)
-										<option value="{{$data->id}}">{{ $data->jenis }}</option>
+									<option value="{{$data->id}}">{{ $data->jenis }}</option>
 									@endforeach
 								</select>
 							</div>
@@ -54,12 +54,22 @@
 							<div class="form-group">
 								<label>Satuan</label>
 								<select class="form-control" value="" name="satuan">
-									<option value="">Satuan Obat</option>
+									<option value="{{$obats->stok}}">{{$obats->stok}}</option>
+									@if($obats->stok != "box")
 									<option value="box">Box</option>
+									@endif
+									@if($obats->stok != "pcs")
 									<option value="pcs">Pcs</option>
+									@endif
+									@if($obats->stok != "buah")
 									<option value="buah">Buah</option>
+									@endif
+									@if($obats->stok != "sachet")
 									<option value="sachet">Sachet</option>
+									@endif
+									@if($obats->stok != "strip")
 									<option value="strip">Strip</option>
+									@endif
 								</select>
 							</div>
 						</div>

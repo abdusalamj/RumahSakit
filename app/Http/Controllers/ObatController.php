@@ -37,7 +37,7 @@ class ObatController extends Controller
 		if (isset($edit)) {
 			return view('obat.edit', ['obats' => $edit, 'jenis' => $jenis]);  
 		}else{
-			echo "ada kesalahan";
+			return view('obat.404');
 		}
 	}
 
@@ -54,7 +54,7 @@ class ObatController extends Controller
 			$update->save();
 			return redirect('obat');
 		}else{
-			echo "ada kesalahan";
+			return view('obat.404');
 		}
 	}
 

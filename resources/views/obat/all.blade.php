@@ -32,8 +32,8 @@
 							<td class="text-center">{{ $obat->jumlah }} <b><i>*</i>{{ $obat->stok }}</b></td>
 							<td class="text-center">{{ $obat->harga }}</td>
 							<td class="text-center">
-								<a href="{{ url('obat/edit', [$obat->id]) }}">Ubah</a>
-								<a href="{{ url('obat/delete', [$obat->id]) }}">Hapus</a>
+								<a href="{{ url('obat/edit', [$obat->id]) }}" class="btn btn-warning">Ubah</a>
+								<a href="{{ url('obat/delete', [$obat->id]) }}" class="btn btn-danger" onclick="return confirm('apa anda yakin ingin menghapus data dengan nama obat {{$obat->nama}} ?')">Hapus</a>
 							</td>
 						</tr>
 						@endforeach
