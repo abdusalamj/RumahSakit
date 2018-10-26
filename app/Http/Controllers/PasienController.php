@@ -12,11 +12,13 @@ class PasienController extends Controller
     	$data['pasien'] = \App\Pasien::All();
     	return view('pasien.index',$data);
     }
+
     public function add()
     {
     	$data['pasien'] = \App\Pasien::All();
     	return view('pasien.add');
     }
+
     public function store(Request $r)
     {
     	$pasien = new Pasien;
@@ -31,11 +33,13 @@ class PasienController extends Controller
     	$pasien->save();
     	return redirect(url('pasien'));
     }
+
     public function edit($id)
     {
     	$data['pasien'] = Pasien::find($id);
     	return view('pasien.edit')->with($data);
     }
+
     public function update(Request $r)
     {
  		$edit = Pasien::find($r->input('id'));
@@ -50,6 +54,7 @@ class PasienController extends Controller
     	$edit->save();
     	return redirect(url('pasien'));
     }
+    
     public function delete($id)
     {
     	Pasien::whereId($id)->delete();
