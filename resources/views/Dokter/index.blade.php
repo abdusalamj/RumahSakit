@@ -1,12 +1,6 @@
+@extends('layout.master')
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>List Dokter</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-  </head>
-  <body>
+@section('content')
     <div class="container">
     <br />
     @if (\Session::has('success'))
@@ -17,29 +11,29 @@
     <table class="table table-striped">
     <thead>
       <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Alamat</th>
-        <th>Jenis Kelamin</th>
-        <th>Spesialis</th>
-        <th>Nomor Telepon</th>
-        <th>Nomor Identitas</th>
-        <th>Action</th
+        <th class="text-center">ID</th>
+        <th class="text-center">Name</th>
+        <th class="text-center">Email</th>
+        <th class="text-center">Alamat</th>
+        <th class="text-center">Jenis Kelamin</th>
+        <th class="text-center">Spesialis</th>
+        <th class="text-center">Nomor Telepon</th>
+        <th class="text-center">Nomor Identitas</th>
+        <th class="text-center">Action</th
       </tr>
     </thead>
     <tbody>
 
       @foreach($datas as $dokter)
       <tr>
-        <td>{{$dokter['id']}}</td>
-        <td>{{$dokter['nama_dokter']}}</td>
-        <td>{{$dokter['email']}}</td>
-        <td>{{$dokter['alamat']}}</td>
-        <td>{{$dokter['jenis_kelamin']}}</td>
-        <td>{{$dokter['spesialis']}}</td>
-        <td>{{$dokter['no_hp']}}</td>
-        <td>{{$dokter['no_identitas']}}</td>
+        <td class="text-center">{{$dokter['id']}}</td>
+        <td class="text-center">{{$dokter['nama_dokter']}}</td>
+        <td class="text-center">{{$dokter['email']}}</td>
+        <td class="text-center">{{$dokter['alamat']}}</td>
+        <td class="text-center">{{$dokter['jenis_kelamin']}}</td>
+        <td class="text-center">{{$dokter['spesialis']}}</td>
+        <td class="text-center">{{$dokter['no_hp']}}</td>
+        <td class="text-center">{{$dokter['no_identitas']}}</td>
          <td align="right"><a href="{{action('DokterController@edit', $dokter['id'])}}" class="btn btn-warning">Edit</a></td>
          <td align="left"><a href ="{{action('DokterController@delete', $dokter['id'])}}" class="btn btn-danger">Delete</a></td>
 
@@ -49,6 +43,4 @@
   </table>
   </div>
  <td align="right"><a href="dokter/add" class="btn btn-success">add</a></td>
-
-  </body>
-</html>
+ @endsection

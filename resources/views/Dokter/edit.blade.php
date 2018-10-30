@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Laravel CRUD - EDIT </title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-  </head>
-  <body>
+@extends('layout.master')
+
+@section('content')
+
     <div class="container">
       <h2>Update Dokter</h2><br  />
         <form method="post" action="{{action('DokterController@update')}}">
@@ -50,5 +46,5 @@
         </div>
       </form>
     </div>
-  </body>
-</html>
+    
+@endsection
