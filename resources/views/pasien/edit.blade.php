@@ -1,14 +1,33 @@
+<<<<<<< HEAD
  @extends('layout.master')
   @section('content')
 	<div class="container">
 		<form method="post" action="{{url('pasien/update')}}">
 			{{csrf_field()}}
 			<input class="form-control" name="id" type="hidden" value="{{$pasien->id}}">
+=======
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>EDIT</title>
+	<link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
+</head>
+<body>
+	<div class="container">
+		<form method="post" action="{{url('pasien/update')}}">
+			{{csrf_field()}}
+			<input class="form-control" name="id" type="text" value="{{$pasien->id}}">
+>>>>>>> dd5665bccd004136d5ea3b3d953dfcec5335fad6
 			<div class="row">
 				<div class="col-md-4"></div>
 					<div class="form-group col-md-4">
 						<label for="nama">Nama</label>
+<<<<<<< HEAD
 						<input type="text" class="form-control" name="nama" value="{{$pasien->nama}}"  >
+=======
+						<input type="text" class="form-control" name="nama" >
+>>>>>>> dd5665bccd004136d5ea3b3d953dfcec5335fad6
 					</div>
 			</div>
 			<div class="row">
@@ -63,9 +82,18 @@
 			<div class="row">
  				<div class="col-md-4"></div>
  					<div class="form-group col-md-4">
+<<<<<<< HEAD
  						<center><button type="submit" class="btn btn-success" style="margin:">UPDATE</button></center>
+=======
+ 						<button type="submit" class="btn btn-success" style="margin:120px">TAMBAH</button>
+>>>>>>> dd5665bccd004136d5ea3b3d953dfcec5335fad6
  						</div>
  			</div>
 		</form>
 	</div>
+<<<<<<< HEAD
 @endsection
+=======
+</body>
+</html>
+>>>>>>> dd5665bccd004136d5ea3b3d953dfcec5335fad6
