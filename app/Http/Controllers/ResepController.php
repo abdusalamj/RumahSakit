@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Resep as MResep;
+use App\Dokter as MDokter;
 
 class ResepController extends Controller
 {
