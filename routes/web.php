@@ -65,7 +65,7 @@ Route::post('list_obat/update','ListController@update');
 Route::get('list_obat/delete/{id}','ListController@delete');
 
 Route::get('jenis_obat' , 'JenisController@index');
-Route::get('jenis_obat/add','JenisController@add');
+Route::get('jenis_obat/add','JenisController@create');
 Route::post('jenis_obat/save','JenisController@store');
 Route::get('jenis_obat/edit/{id}','JenisController@edit');
 Route::post('jenis_obat/update','JenisController@update');

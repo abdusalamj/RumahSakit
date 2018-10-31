@@ -20,6 +20,12 @@
                 </a>
             </li>
             <li>
+                <a href="{{url('/jenis_obat')}}">
+                    <i class="pe-7s-user"></i>
+                    <p>Jenis Obat</p>
+                </a>
+            </li>
+            <li>
                 <a href="{{url('/resep')}}">
                     <i class="pe-7s-note2"></i>
                     <p>Resep</p>
