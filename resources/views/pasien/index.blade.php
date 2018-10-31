@@ -6,7 +6,7 @@
 		<section class="content">
 				<div class="box">
 					<div class="box-header">
-						<h3 class="box-title">Daftar Siswa</h3>
+						<h3 class="box-title">Daftar Pasien</h3>
 					
 				 			<table class="table table-stripped">
 						<thead>
