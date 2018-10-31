@@ -4,7 +4,7 @@
 <a class="btn btn-primary pull-right" href="kamar/add">Tambah Data</a>
 <div class="row">
 
-  <h2>Data Pasien</h2>        
+  <h2>Data Kamar</h2>        
 
   <table class="table table-striped">
 
