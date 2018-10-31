@@ -1,8 +1,10 @@
 @extends('layout.master')
-
+@section('title')
+Dokter
+@endsection
 @section('content')
 
-    <div class="container">
+    <div class="row">
       <h2>Update Dokter</h2><br  />
         <form method="post" action="{{action('DokterController@update')}}">
         @csrf
@@ -22,8 +24,11 @@
             <input type="text" class="form-control" name="alamat" value="{{$dokter->alamat}}">
           </div>
           <div class="form-group col-md-4">
-            <label for="name">Jenis Kelamin:</label>
-            <input type="text" class="form-control" name="jenis_kelamin" value="{{$dokter->jenis_kelamin}}">
+            <label for="Name">Jenis Kelamin:</label>
+            <select name="jenis_kelamin" class="form-control" id="Name">
+              <option value="laki-laki">Laki-Laki</option>
+              <option value="perempuan">Perempuan</option>
+            </select>
           </div>
           <div class="form-group col-md-4">
             <label for="name">Speisalis:</label>
@@ -46,5 +51,5 @@
         </div>
       </form>
     </div>
-    
+
 @endsection
