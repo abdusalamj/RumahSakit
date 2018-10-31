@@ -1,10 +1,12 @@
 @extends('layout.master')
-
+@section('title')
+Dokter
+@endsection
 @section('content')
-    <div class="container">
+    <div class="row">
       <h2>Dokter List</h2><br/>
-      <form method="post" action="{{url('dokter/save')}}" enctype="multipart/form-data">
-        @csrf
+      <form method="post" action="{{url('dokter/save')}}">
+        {{csrf_field()}}
         <div class="row">
           <div class="col-md-12"></div>
           <div class="form-group col-md-4">
@@ -21,7 +23,10 @@
           </div>
           <div class="form-group col-md-4">
             <label for="Name">Jenis Kelamin:</label>
-            <input type="text" class="form-control" name="jenis_kelamin">
+            <select name="jenis_kelamin" class="form-control" id="Name">
+              <option value="laki-laki">Laki-Laki</option>
+              <option value="perempuan">Perempuan</option>
+            </select>
           </div>
           <div class="form-group col-md-4">
             <label for="Name">Spesialis:</label>

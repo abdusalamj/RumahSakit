@@ -18,7 +18,7 @@ class CreateDoktersTable extends Migration
             $table->string('nama_dokter');
             $table->string('email');
             $table->string('alamat');
-            $table->string('jenis_kelamin');
+            $table->enum('jenis_kelamin', ['laki-laki', 'perempuan']);
             $table->string('spesialis');
             $table->string('no_hp');
             $table->string('no_identitas');

@@ -1,7 +1,9 @@
 @extends('layout.master')
-
+@section('title')
+Dokter
+@endsection
 @section('content')
-    <div class="container">
+    <div class="row">
     <br />
     @if (\Session::has('success'))
       <div class="alert alert-success">
