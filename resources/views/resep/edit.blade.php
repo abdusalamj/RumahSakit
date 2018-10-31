@@ -23,24 +23,27 @@ Resep
 							<label>Dokter</label>
 							<select class="form-control" name="dokter" required>
 								<option selected disabled>Pilih Dokter</option>
-								<option {{ ($resep->dokter_id == 1)? "selected" : "" }} value="1">Benzo</option>
-								<option {{ ($resep->dokter_id == 2)? "selected" : "" }} value="2">Zambimaru</option>
+								@foreach ($dokter as $value)
+									<option value="{{ $value->id }}" {{ ($resep->dokter_id == $value->id)? "selected" : "" }}>{{ $value->nama_dokter }}</option>
+								@endforeach
 							</select>
 						</div>
 						<div class="col-md-10">
 							<label>Pasien</label>
 							<select class="form-control" name="pasien" required>
 								<option selected disabled>Pilih Pasien</option>
-								<option {{ ($resep->pasien_id == 1)? "selected" : "" }} value="1">Kupluk</option>
-								<option {{ ($resep->pasien_id == 2)? "selected" : "" }} value="2">Juna</option>
+								@foreach ($pasien as $value)
+									<option value="{{ $value->id }}" {{ ($resep->pasien_id == $value->id)? "selected" : "" }}>{{ $value->nama }}</option>
+								@endforeach
 							</select>
 						</div>
 						<div class="col-md-10">
 							<label>Obat</label>
 							<select class="form-control" name="obat" required>
 								<option selected disabled>Pilih Obat</option>
-								<option {{ ($resep->obat_id == 1)? "selected" : "" }} value="1">Micsagrip Extra</option>
-								<option {{ ($resep->obat_id == 2)? "selected" : "" }} value="2">OBH Combine</option>
+								@foreach ($obat as $value)
+									<option value="{{ $value->id }}" {{ ($resep->obat_id == $value->id)? "selected" : "" }}>{{ $value->nama }}</option>
+								@endforeach
 							</select>
 						</div>
 						<div class="col-md-10" style="margin-top: 10px;">

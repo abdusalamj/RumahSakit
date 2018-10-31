@@ -31,9 +31,9 @@ Resep
 							<td>{{ ($key+1) }}</td>
 							<td>{{ $value->nama_resep }}</td>
 							<td>{{ $value->kode_resep }}</td>
-							<td>{{ $value->dokter_id }}</td>
-							<td>{{ $value->pasien_id }}</td>
-							<td>{{ $value->obat_id }}</td>
+							<td>{{ $value->getDokter->nama_dokter }}</td>
+							<td>{{ $value->getPasien->nama }}</td>
+							<td>{{ $value->getObat->nama }}</td>
 							<td style="width: 170px;">
 								<a href="{{ url('resep/edit/'.$value->id) }}" class="btn btn-warning" style="margin-right: 5px;">Edit</a>
 								<a href="{{ url('resep/delete/'.$value->id) }}" onclick="return confirm('Anda yakin?')" class="btn btn-danger">Delete</a>

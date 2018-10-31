@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Resep as MResep;
 use App\Dokter as MDokter;
+use App\pasien as MPasien;
+use App\Obat as MObat;
 
 class ResepController extends Controller
 {
@@ -16,7 +18,10 @@ class ResepController extends Controller
 
     public function add()
     {
-    	return view("resep.add");
+    	$data['dokter'] = MDokter::all();
+    	$data['pasien'] = MPasien::all();
+    	$data['obat'] = MObat::all();
+    	return view("resep.add")->with($data);
     }
 
     public function store(Request $r)
@@ -36,6 +41,9 @@ class ResepController extends Controller
 
     public function edit($id)
     {
+    	$data['dokter'] = MDokter::all();
+    	$data['pasien'] = MPasien::all();
+    	$data['obat'] = MObat::all();
     	$data['resep'] = MResep::find($id);
 
     	return view('resep.edit')->with($data);

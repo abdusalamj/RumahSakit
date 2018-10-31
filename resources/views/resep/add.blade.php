@@ -22,24 +22,27 @@ Resep
 							<label>Dokter</label>
 							<select class="form-control" name="dokter" required>
 								<option selected disabled>Pilih Dokter</option>
-								<option value="1">Benzo</option>
-								<option value="2">Zambimaru</option>
+								@foreach ($dokter as $value)
+									<option value="{{ $value->id }}">{{ $value->nama_dokter }}</option>
+								@endforeach
 							</select>
 						</div>
 						<div class="col-md-10">
 							<label>Pasien</label>
 							<select class="form-control" name="pasien" required>
 								<option selected disabled>Pilih Pasien</option>
-								<option value="1">Kupluk</option>
-								<option value="2">Juna</option>
+								@foreach ($pasien as $value)
+									<option value="{{ $value->id }}">{{ $value->nama }}</option>
+								@endforeach
 							</select>
 						</div>
 						<div class="col-md-10">
 							<label>Obat</label>
 							<select class="form-control" name="obat" required>
 								<option selected disabled>Pilih Obat</option>
-								<option value="1">Micsagrip Extra</option>
-								<option value="2">OBH Combine</option>
+								@foreach ($obat as $value)
+									<option value="{{ $value->id }}">{{ $value->nama }}</option>
+								@endforeach
 							</select>
 						</div>
 						<div class="col-md-10" style="margin-top: 10px;">
