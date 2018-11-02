@@ -47,8 +47,9 @@ class JenisController extends Controller
   
     public function edit($id)
     {
-        $JenisObat = JenisObat::find($id);
-        return view('jenis_obat.edit')->with($JenisObat);
+        $JenisObat['JenisObat'] = JenisObat::find($id);
+        // dd($JenisObat);
+        return view('obat.jenis.edit')->with($JenisObat);
         //
     }
 
@@ -59,7 +60,7 @@ class JenisController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $JenisObat= JenisObat::find($request->id);
       $JenisObat->keterangan=$request->input('keterangan');
