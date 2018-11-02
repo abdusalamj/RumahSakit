@@ -8,13 +8,14 @@
 				<h4 class="title">Edit Jenis Obat</h4>
 			</div>
 			<div class="content">
-				<form method="POST" action="{{url('jenis_obat/save')}}">
+				<form method="POST" action="{{url('jenis_obat/update')}}">
 					@csrf
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
 								<label>Jenis</label>
-								<input type="text" class="form-control" placeholder="Jenis Obat" name="jenis">
+								<input type="hidden" name="id" value="{{$JenisObat->id}}">
+								<input type="text" class="form-control" placeholder="Jenis Obat" name="jenis" value="{{$JenisObat->jenis}}">
 							</div>
 						</div>						
 					</div>
@@ -22,7 +23,7 @@
 						<div class="col-md-6">
 							<div class="form-group">
 								<label for="exampleInputEmail1">Keterangan</label>
-								<input type="text" class="form-control" placeholder="Keterangan" name="keterangan">
+								<input type="text" class="form-control" placeholder="Keterangan" name="keterangan" value="{{$JenisObat->keterangan}}">
 							</div>
 						</div>						
 					</div>										

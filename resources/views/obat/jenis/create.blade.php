@@ -26,7 +26,7 @@
 							</div>
 						</div>						
 					</div>										
-					<button type="submit" class="btn btn-info btn-fill pull-right">Tambah Jenis</button>
+					<button type="submit" class="btn btn-primary btn-fill pull-right">Tambah Jenis</button>
 					<div class="clearfix"></div>
 				</form>
 			</div>

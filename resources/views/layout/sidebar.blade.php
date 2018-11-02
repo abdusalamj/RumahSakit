@@ -21,7 +21,7 @@
             </li>
             <li>
                 <a href="{{url('/jenis_obat')}}">
-                    <i class="pe-7s-user"></i>
+                    <i class="pe-7s-like"></i>
                     <p>Jenis Obat</p>
                 </a>
             </li>

@@ -28,7 +28,7 @@ Jenis Obat
 							<td class="text-center">{{ $jenis->jenis }}</td>
 							<td class="text-center">{{ $jenis->keterangan }}</td>
 							<td class="text-center">
-								<a href="{{ url('jenis_obat/edit', [$jenis->id]) }}" class="btn btn-warning">Ubah</a>
+								<a href="{{ url('jenis_obat/edit',[$jenis->id]) }}" class="btn btn-warning">Ubah</a>
 								<a href="{{ url('jenis_obat/delete', [$jenis->id]) }}" class="btn btn-danger" onclick="return confirm('apa anda yakin ingin menghapus data dengan nama obat {{$jenis->jenis}} ?')">Hapus</a>
 							</td>
 						</tr>
