@@ -34,6 +34,10 @@
 	                                        	 @else Lantai 5
                                         	 </td> @endif
                                         	<td>{{ $key->keterangan }}</td>
+                                            <td style="width: 170px;">
+                                                <a href="{{ url('fasilitas/edit/'.$key->id) }}" class="btn btn-warning" style="margin-right: 5px;">Edit</a>
+                                                <a href="{{ url('fasilitas/delete/'.$key->id) }}" onclick="return confirm('Anda yakin?')" class="btn btn-danger">Delete</a>
+                                            </td>
                                         </tr>
                                     @endforeach
                                     </tbody>
