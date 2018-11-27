@@ -19,9 +19,9 @@ Resep
 						<th>No</th>
 						<th>Nama Resep</th>
 						<th>Kode Resep</th>
-						<th>id_dokter</th>
-						<th>id_pasien</th>
-						<th>id_list</th>
+						<th>Nama Dokter</th>
+						<th>Nama Pasien</th>
+						<th>Nama Obat</th>
 						<th>Aksi</th>
 					</thead>
 					<tbody>
