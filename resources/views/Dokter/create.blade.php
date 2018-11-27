@@ -24,13 +24,23 @@ Dokter
           <div class="form-group col-md-4">
             <label for="Name">Jenis Kelamin:</label>
             <select name="jenis_kelamin" class="form-control" id="Name">
-              <option value="laki-laki">Laki-Laki</option>
-              <option value="perempuan">Perempuan</option>
+              <option value="Laki-Laki">Laki-Laki</option>
+              <option value="Perempuan">Perempuan</option>
             </select>
           </div>
           <div class="form-group col-md-4">
             <label for="Name">Spesialis:</label>
-            <input type="text" class="form-control" name="spesialis">
+            <select name="spesialis" class="form-control" id="Name">
+              <option value="Kardiovaskular">Kardiovaskular</option>
+              <option value="THT">THT</option>
+              <option value="Kesehatan Gigi dan Mulut">Kesehatan Gigi dan Mulut</option>
+              <option value="Ginekologi">Ginekologi</option>
+              <option value="Tulang">Tulang</option>
+              <option value="Anak">Anak</option>
+              <option value="Psikiater">Psikiater</option>
+              <option value="Saraf">Saraf</option>
+              <option value="Kulit & Kelamin">Kulit & Kelamin</option>
+            </select>
           </div>
           <div class="form-group col-md-4">
             <label for="Name">Nomor Telepon:</label>
