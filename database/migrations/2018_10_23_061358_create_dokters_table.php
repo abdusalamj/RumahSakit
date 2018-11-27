@@ -18,8 +18,8 @@ class CreateDoktersTable extends Migration
             $table->string('nama_dokter');
             $table->string('email');
             $table->string('alamat');
-            $table->enum('jenis_kelamin', ['laki-laki', 'perempuan']);
-            $table->string('spesialis');
+            $table->enum('jenis_kelamin', ['Laki-Laki', 'Perempuan']);
+            $table->enum('spesialis', ['Kardiovaskular', 'THT', 'Kesehatan Gigi dan Mulut', 'Ginekologi', 'Tulang', 'Anak', 'Psikiater', 'Saraf', 'Kulit & Kelamin']);
             $table->string('no_hp');
             $table->string('no_identitas');
             $table->timestamps();
